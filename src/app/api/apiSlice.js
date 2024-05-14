@@ -7,7 +7,7 @@ const baseQuery = fetchBaseQuery({
     prepareHeaders: (headers, { getState }) => {  //getState destructured from api object
         const token = getState().auth.token
         
-        headers.set("Access-Control-Allow-Origin", "https://technotes-4ljv.onrender.co")
+        headers.set("Access-Control-Allow-Origin", "https://technotes-4ljv.onrender.com")
         if (token) {
             headers.set("authorization", `Bearer ${token}`)
         }

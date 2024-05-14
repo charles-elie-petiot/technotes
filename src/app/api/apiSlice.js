@@ -4,6 +4,7 @@ import { setCredentials } from "../../features/auth/authSlice"
 const baseQuery = fetchBaseQuery({
     baseUrl: "https://technotes-api-owgd.onrender.com",   //url de base
     credentials: 'include',            // always send cookie containing refresh token
+    mode: "no-cors",
     prepareHeaders: (headers, { getState }) => {  //getState destructured from api object
         const token = getState().auth.token
         

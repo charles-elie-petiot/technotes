@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
 import { setCredentials } from "../../features/auth/authSlice"
 
 const baseQuery = fetchBaseQuery({
-    baseUrl: "https://technotes-api.onrender.com",   //url de base
+    baseUrl: "https://technotes-api-owgd.onrender.com",   //url de base
     credentials: 'include',            // always send cookie containing refresh token
     prepareHeaders: (headers, { getState }) => {  //getState destructured from api object
         const token = getState().auth.token
